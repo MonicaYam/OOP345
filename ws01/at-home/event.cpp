@@ -73,6 +73,7 @@ namespace sdds
 
 
     void Event::setDescription(const char* srcDesc) {
+        delete[] _descEvent;
         if (!isDescEmpty(srcDesc)) {
             int srcLength = strlen(srcDesc);
             _descEvent = new char[srcLength + 1];
